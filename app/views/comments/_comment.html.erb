@@ -1,0 +1,7 @@
+<%= cache comment do%>
+	<div class="comment">
+		<p><b>Posted <%= time_ago_in_words(comment.created_at) %> ago</b></p>
+		<p><%= comment.content %></p>
+	</div>
+<% end %>
+
