@@ -2,12 +2,24 @@ body
 {
   font-family: tahoma, sans-serif;
   font-size: 18px;
-  background-color: #4B7399;
+  background-color: #ffffff;
   width: 100%;
-  color: #ffffff;
+  color: #999999;
   margin: 0;
   text-align: center;
 }
+
+#header
+{
+	text-align: left;
+	padding-left: 80px;
+	padding-left: 8.0rem;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-style: oblique;
+	color: #000000;
+}
+
 
 #content
 {
@@ -19,7 +31,28 @@ body
 .comment
 {
   padding: 5px 20px 5px 20px;
-  background-color: #ffffff;
+  background-color: #cccccc;
   margin: 20px 0 20px 0;
-  color: #000000;
+  color: #222222;
 } 
+
+#footer-wrap
+{
+	font-size: 14px;
+	font-size: 1.4rem;
+	position: fixed;
+	bottom: 0px;
+	right: 0;
+	background-color: #ffffff;
+}
+
+#footer{
+	padding-right: 10px;
+	padding-right: 1.0rem;
+	text-align: right;
+}
+
+#footer a{
+	text-decoration: none;
+	color: #888888;
+}
