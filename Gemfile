@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.0'
 # Use Puma as the app server
 gem 'puma'
 
+#Social-Share_Buttons
+gem 'social-share-button'
+
 #For Heroku
 gem 'rails_12factor', group: :production
 

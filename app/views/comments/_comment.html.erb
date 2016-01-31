@@ -1,7 +1,11 @@
 <%= cache comment do%>
-	<div class="comment">
-		<p><b>Posted <%= time_ago_in_words(comment.created_at) %> ago</b></p>
-		<p><%= comment.content %></p>
-	</div>
+	<%= link_to comment do%>
+		<div class="comment">
+			<p><b>Posted <%= time_ago_in_words(comment.created_at) %> ago</b></p>
+			<p><%= comment.content %></p>
+			<div class="comment-share-btns">
+				<%= social_share_button_tag( comment.content, :url => "www.cacofoni.co/comments/#{comment.id}") %>
+			</div>
+		</div>
+	<% end %>
 <% end %>
-

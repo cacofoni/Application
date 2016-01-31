@@ -6,7 +6,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-   #$('#comments').append data['comment'];
+
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000);
 	
   speak: (comment) ->
