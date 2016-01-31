@@ -8,6 +8,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
   received: (data) ->
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000)
    $( "textarea" ).css('background-color', 'red').prop('disabled', true);
+   flash.notice = "Post successfully created"
    setTimeout(disableTextBox, 3333)
 	
   speak: (comment) ->
