@@ -15,4 +15,5 @@
 //= require jquery-ui
 //= require turbolinks
 //= require social-share-button
-//= require_tree .
+//= require_tree ./sitewide
+//= require_tree

@@ -6,7 +6,7 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-
+<p>You have <span id="counter"></span> characters left.</p>
 <div id = "content">
 	<form id = "room_form">
 		<%= text_area_tag(:comment, nil, :behavior => "room_speaker") %>
