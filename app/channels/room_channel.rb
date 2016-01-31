@@ -9,6 +9,6 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    Comment.create! content: data['comment'], ip: data['ip_address']
+    Comment.create! content: data['comment'], ip: "127.5.0.1"
   end
 end
