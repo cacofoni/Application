@@ -10,7 +10,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000);
 	
   speak: (comment) ->
-    @perform 'speak', comment: comment, ip_address: "<%= request.remote_ip %>"
+    @perform 'speak', comment: comment, ip_address: $('#code').val()
 
 $(document).on 'keypress', '[behavior~=room_speaker]', (event) ->
 	if event.keyCode is 13 #return = send

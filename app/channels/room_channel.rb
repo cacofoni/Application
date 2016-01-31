@@ -1,5 +1,6 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in an EventMachine loop that does not support auto reloading.
 class RoomChannel < ApplicationCable::Channel
+  
   def subscribed
     stream_from "room_channel"
   end
@@ -9,6 +10,6 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    Comment.create! content: data['comment'], ip: "127.5.0.1"
+    Comment.create! content: data['comment'], ip: data['ip_address']
   end
 end

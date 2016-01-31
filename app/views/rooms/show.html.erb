@@ -5,8 +5,9 @@
 <div id = "content">
 	<form id = "room_form">
 		<%= text_area_tag(:comment, nil, :behavior => "room_speaker") %>
+		<input type="hidden" id="code" name="code" value="<%= request.remote_ip %>" />
 	</form>
-
+	
 	<div id="comments">
 		<%= render @comments %>
 	</div>

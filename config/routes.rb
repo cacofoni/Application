@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '/comments/:id', to: 'comments#show', :as => :comment
-
+  
   root to: 'rooms#show'
   
 
