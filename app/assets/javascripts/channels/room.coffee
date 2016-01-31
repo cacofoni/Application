@@ -8,7 +8,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
   received: (data) ->
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000)
    $( "textarea" ).css('background-color', 'red').prop('disabled', true);
-   setTimeout(disableTextBox, 3083)
+   setTimeout(disableTextBox, 4444)
 	
   speak: (comment) ->
     @perform 'speak', comment: comment, ip_address: $('#code').val()
