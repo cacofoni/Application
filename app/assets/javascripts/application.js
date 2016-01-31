@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree ./sitewide
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require_tree ./sitewide
 //= require turbolinks
 //= require social-share-button
 //= require_tree
