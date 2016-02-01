@@ -49,6 +49,11 @@ body
 	word-break: break-word;
 } 
 
+.notice
+{
+	color: red;
+}
+
 .comment a 
 {
 	text-decoration: none;	
