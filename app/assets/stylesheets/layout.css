@@ -49,9 +49,14 @@ body
 	word-break: break-word;
 } 
 
-.notice
+.alert
 {
 	color: red;
+}
+
+.notice
+{
+	color: green;
 }
 
 .comment a 

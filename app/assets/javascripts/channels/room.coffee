@@ -7,7 +7,8 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
   received: (data) ->
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000)
-   $(".notice").text(getPhrase)
+   setFirstTextBoxGreen()
+   $(".alert").text(getPhrase)
    $( "textarea" ).css('background-color', 'red').prop('disabled', true)
    setTimeout(resetTextBox, 3333)
 	
@@ -25,12 +26,26 @@ $(document).on 'keypress', '[behavior~=room_speaker]', (event) ->
 			App.room.speak event.target.value
 			event.target.value = ''
 			event.preventDefault()
+			$( ".comment" ).eq( 0 ).addClass( "green") 
 
 resetTextBox = ->
 	$( "textarea" ).css('background-color', 'white').prop('disabled', false)
-	$(".notice").text("")
+	$(".alert").text("")
 
 
 getPhrase = ->
-	phrases = ["Wait Your Turn", "You will be great someday!", "Better luck next time", "Get ready to speak"]
+	phrases = ["Wait Your Turn", 
+			   "You will be great someday!", 
+			   "Better luck next time", 
+			   "Get ready to speak"]
 	return phrase = phrases[Math.floor(Math.random()*phrases.length)]
+	
+setFirstTextBoxGreen = ->
+	if $( ".comment" ).eq( 1 ).hasClass( "green" )
+		$( ".comment" ).eq( 1 ).removeClass( "green" )
+		$( ".comment" ).eq( 0 ).css('background-color', '#90EE90')
+		
+		
+		
+		
+		
