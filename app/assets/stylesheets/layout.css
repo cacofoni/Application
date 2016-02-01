@@ -46,6 +46,7 @@ body
   	background-color: #cccccc;
   	margin: 20px 0 20px 0;
  	color: #222222;
+	word-break:break-all;
 } 
 
 .comment a 
