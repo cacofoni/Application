@@ -1,6 +1,5 @@
 class RoomsController < ApplicationController
-  
   def show
-    @comments = Comment.order(:created_at => 'desc')
+    @comments = Comment.limit(1000).order(:created_at => 'desc')
   end
 end
