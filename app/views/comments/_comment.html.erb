@@ -1,13 +1,10 @@
 <%= cache comment do%>
 	<%= link_to comment do%>
 		<div class="comment">
-			<p><b>Posted <%= time_ago_in_words(comment.created_at) %> ago</b></p>
-			<abbr class="timeago" title="<%= comment.created_at.getutc.iso8601 %>">
-			  <%= comment.created_at.to_s %>
-			</abbr>
-			<p><%= comment.content %></p>
+			 <p><b>Posted <abbr class="timeago" title="<%= comment.created_at.getutc.iso8601 %>"><%= comment.created_at.to_s %></abbr></b></p>
+			<p class="comment-content"><%= sanitize Rinku.auto_link(comment.content, :all, 'class="content-link"') %></p>
 			<div class="comment-share-btns">
-				<%= social_share_button_tag( comment.content, :url => "www.cacofoni.co/comments/#{comment.id}") %>
+				<%= social_share_button_tag( comment.content, :url => "http://cacofoni.co/comments/#{comment.id}") %>
 			</div>
 		</div>
 	<% end %>

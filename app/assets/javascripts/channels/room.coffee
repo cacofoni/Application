@@ -7,7 +7,8 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
   received: (data) ->
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000)
-   setFirstTextBoxGreen()
+   $("abbr.timeago").timeago();   # Could be a future bottleneck
+   setFirstTextBoxGreen()		 # Could be a future bottleneck
    $(".alert").text(getPhrase)
    $( "textarea" ).css('background-color', 'red').prop('disabled', true)
    setTimeout(resetTextBox, 3333)

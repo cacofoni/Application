@@ -24,6 +24,9 @@ gem 'turbolinks'
 #Add JQuery Turbo Links For JQuery Reevaluation
 gem 'jquery-turbolinks'
 
+#auto-linking text add-on
+gem 'rinku'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # Use Puma as the app server

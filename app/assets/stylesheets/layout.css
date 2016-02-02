@@ -59,11 +59,19 @@ body
 	color: green;
 }
 
+
 .comment a 
 {
 	text-decoration: none;	
-	color: #222222;	
+	color: #000000;	
 }
+
+.comment .content-link 
+{
+	text-decoration: underline;	
+	color: blue;	
+}
+
 .comment .comment-share-btns{
 	text-align: right;
 }

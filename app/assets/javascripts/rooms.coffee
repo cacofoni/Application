@@ -3,6 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
  $('#comment').simplyCountable();
- 
- $(document).ready ->
- 	jQuery("abbr.timeago").timeago();
+
