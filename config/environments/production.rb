@@ -41,7 +41,7 @@ Rails.application.configure do
   # Action Cable endpoint configuration
   config.action_cable.url = 'wss://floating-chamber-23779.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = [ 'https://floating-chamber-23779.herokuapp.com', /https:\/\/floating-chamber-23779.herokuapp.com.*/,
-                                                  'http://cacofoni.co', /https:\/\/cacofoni.co.*/    ]
+                                                  'http://cacofoni.co', /http:\/\/cacofoni.co.*/    ]
    
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
