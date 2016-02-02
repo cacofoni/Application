@@ -2,6 +2,9 @@
 	<%= link_to comment do%>
 		<div class="comment">
 			<p><b>Posted <%= time_ago_in_words(comment.created_at) %> ago</b></p>
+			<abbr class="timeago" title="<%= comment.created_at.getutc.iso8601 %>">
+			  <%= comment.created_at.to_s %>
+			</abbr>
 			<p><%= comment.content %></p>
 			<div class="comment-share-btns">
 				<%= social_share_button_tag( comment.content, :url => "www.cacofoni.co/comments/#{comment.id}") %>
