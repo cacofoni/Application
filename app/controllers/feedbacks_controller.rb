@@ -2,14 +2,13 @@ class FeedbacksController < ApplicationController
   layout false
 
   def new
-    @feedback = Feedback.new(page: request.referer)
+    @feedback = Feedback.new
   end
 
   def create
-    @feedback = Feedback.new(params[:feedback])
+    @feedback = Feedback.new(ad_params)
     if @feedback.valid?
-      FeedbackMailer.feedback(@feedback).deliver
-      render :status => :created, :text => '<h3>Thank you for your feedback!</h3>'
+      Feedback.create! ad_params
     else
       @error_message = "Please enter your #{@feedback.subject.to_s.downcase}"
 
@@ -20,4 +19,9 @@ class FeedbacksController < ApplicationController
       render :action => 'new', :status => :unprocessable_entity
     end
   end
+  
+  private
+   def ad_params    
+     params.require(:feedback).permit(:subject, :email, :comment)
+   end
 end

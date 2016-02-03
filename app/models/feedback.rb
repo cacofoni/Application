@@ -1,15 +1,5 @@
-class Feedback
-  attr_accessor :subject, :email, :comment, :page
+ class Feedback < ActiveRecord::Base
 
-  def initialize(params = {})
-    self.subject = params[:subject]
-    self.email = params[:email]
-    self.comment = params[:comment]
-    self.page = params[:page]
-  end
-
-  def valid?
-    self.comment && !self.comment.strip.blank?
-  end
-
+  validates :subject, :presence => true
+  validates :comment, :presence => true
 end
