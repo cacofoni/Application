@@ -10,7 +10,7 @@ class FeedbacksController < ApplicationController
     if @feedback.valid?
       Feedback.create! ad_params
     else
-      @error_message = "Please enter your #{@feedback.subject.to_s.downcase}"
+      @error_message = "Please enter your email and messages correctly"
 
       # Returns the whole form back. This is not the most effective
       # use of AJAX as we could return the error message in JSON, but
