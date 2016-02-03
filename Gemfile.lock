@@ -272,6 +272,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
+  kaminari
   pg (~> 0.18)
   puma
   rails (>= 5.0.0.beta1.1, < 5.1)
