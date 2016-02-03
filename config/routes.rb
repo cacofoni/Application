@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'feedbacks' => 'feedbacks#create', :as => :feedback
+  post 'feedbacks' => 'feedbacks#create', :as => :feedback
   get 'feedbacks/new' => 'feedbacks#new', :as => :new_feedback
   get '/comments/:id', to: 'comments#show', :as => :comment
   
