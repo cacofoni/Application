@@ -42,7 +42,6 @@ gem 'rails_12factor', group: :production
 #Active Admin Download
 gem 'devise', :github => 'plataformatec/devise', :ref => '1d77099861e2082a6bf5ef9c3a422c2ec315adb2'
 gem 'formtastic', github: 'justinfrench/formtastic', :branch => 'master' 
-gem 'kaminari'
 gem 'activeadmin', :github => 'activeadmin/activeadmin', :branch => 'rails-5-rspec'
 
 
