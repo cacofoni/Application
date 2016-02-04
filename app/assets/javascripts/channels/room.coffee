@@ -10,6 +10,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
    $( "#comments" ).addClass( "blockEntries")
    $(data['comment']).prependTo('#comments').effect("bounce", "slow").effect("highlight", {}, 3000)
    $("abbr.timeago").timeago();   # Could be a future bottleneck
+   $( "textarea" ).css('background-color', 'red')
    setFirstTextBoxGreen()		 # Could be a future bottleneck
   # $( "textarea" ).css('background-color', 'red')
    setTimeout(resetTextBox, 3333)
@@ -32,7 +33,7 @@ $(document).on 'keypress', '[behavior~=room_speaker]', (event) ->
 				$(".alert").text(getPhrase)
 
 resetTextBox = ->
-#	$( "textarea" ).css('background-color', 'white').prop('disabled', false)
+	$( "textarea" ).css('background-color', 'white')
 	$(".alert").text("")
 	$( "#comments" ).removeClass( "blockEntries")
 
@@ -45,7 +46,8 @@ getPhrase = ->
 			   "Advice: Try pressing enter faster",
 			   "Someone beat you to it",
 			   "My one year old types faster than you",
-			   "Get ready to speak"]
+			   "Get ready to speak",
+		   		"The red box got you"]
 	return phrase = phrases[Math.floor(Math.random()*phrases.length)]
 	
 setFirstTextBoxGreen = ->
