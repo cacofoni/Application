@@ -28,13 +28,16 @@ $(document).on 'keypress', '[behavior~=room_speaker]', (event) ->
 			event.target.value = ''
 			event.preventDefault()
 			$( ".comment" ).eq( 0 ).addClass( "green") 
+			$(".notice").text("Your comment was successfuly submitted")
 		else 
 			if $(".alert").text() is ""
 				$(".alert").text(getPhrase)
+			
 
 resetTextBox = ->
 	$( "textarea" ).css('background-color', 'white')
 	$(".alert").text("")
+	$(".notice").text("")
 	$( "#comments" ).removeClass( "blockEntries")
 
 
@@ -47,7 +50,9 @@ getPhrase = ->
 			   "Someone beat you to it",
 			   "My one year old types faster than you",
 			   "Get ready to speak",
-		   		"The red box got you"]
+		   		"The red box got you",
+				"Don't you see the red box? Wait your turn!"]
+				
 	return phrase = phrases[Math.floor(Math.random()*phrases.length)]
 	
 setFirstTextBoxGreen = ->
