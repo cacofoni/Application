@@ -50,12 +50,12 @@ body
 	word-break: break-word;
 } 
 
-.alert
+.failure
 {
 	color: red;
 }
 
-.notice
+.success
 {
 	color: green;
 }
