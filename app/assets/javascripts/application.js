@@ -18,3 +18,6 @@
 //= require jquery.turbolinks
 //= require social-share-button
 //= require_tree
+
+
+
