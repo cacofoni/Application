@@ -50,7 +50,7 @@ setNotice = (indicator) ->
 				   "Winner winner chicken dinner..",
 				   "They wish they could be like you",
 				   "Easy peasy lemon squeezy",
-				   "Easy",
+				   "Nicely done!",
 			   		"You could do this in your sleep",
 					"Congrats, you win!"]
 					
