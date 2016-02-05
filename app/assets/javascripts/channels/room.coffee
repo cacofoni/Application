@@ -30,7 +30,8 @@ $(document).on 'keypress', '[behavior~=room_speaker]', (event) ->
 			$( ".comment" ).eq( 0 ).addClass( "green") 
 			setNotice("success")
 		else 
-			if textContent.length > 1 
+			if textContent.length > 1
+			 $( "textarea" ).effect( "shake", {times:6}, 500 ) 
 			 setNotice("failure")
 			
 
