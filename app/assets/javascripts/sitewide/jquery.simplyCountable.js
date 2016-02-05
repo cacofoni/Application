@@ -14,7 +14,7 @@
 (function($){
 
   $.fn.simplyCountable = function(options){
-    
+
     options = $.extend({
       counter:            '#counter',
       countType:          'characters',
