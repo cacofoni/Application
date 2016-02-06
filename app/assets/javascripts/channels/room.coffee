@@ -89,10 +89,10 @@ addMessageCountForDistractedUser = ->
 			if event.type is "blur"
 				theNum = document.title.match(/\d+/)
 				if(theNum is null)
-					theNum = "0"
+					document.title = "Cacofoni: A New Messesage Awaits"
 				else
 					newNumber = +theNum + 1
-				document.title = "Cacofoni " + newNumber.toString()
+					document.title = "Cacofoni: " + newNumber.toString() + " New Messesages Await"
 			else if event.type is "focus" 
 				document.title = "Cacofoni")
 				
