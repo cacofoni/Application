@@ -2,7 +2,7 @@
  <div id = "feed">
 	 <div class = "marquee">
 		<% @feed.entries.each do |feed| %>
-			<a href="<%= feed.url %>" target="_blank"><%= feed.title %> &nbsp; | &nbsp; </a> 
+			<a href="<%= feed.url %>" target="_blank" class="marquee"> &nbsp; &nbsp; <%= feed.title %> &nbsp; &nbsp;</a> 
 		<% end %>
 	</div>
 </div>
