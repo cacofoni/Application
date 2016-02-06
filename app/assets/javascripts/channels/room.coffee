@@ -13,6 +13,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
    $( "textarea" ).css('background-color', 'red')
    setFirstTextBoxGreen()		 # Could be a future bottleneck
    setTimeout(resetTextBox, 4178)
+   addMessageCountForDistractedUser()
 	
   speak: (comment) ->
     @perform 'speak', comment: comment, ip_address: $('#code').val()
@@ -70,6 +71,7 @@ setNotice = (indicator) ->
 	$( "#notice" ).removeClass().addClass(indicator);
 	$( "#notice" ).text(phrase)
 	
+	
 setFirstTextBoxGreen = ->
 	if $( ".comment" ).eq( 1 ).hasClass( "green" )
 		$( ".comment" ).eq( 1 ).removeClass( "green" )
@@ -78,4 +80,19 @@ setFirstTextBoxGreen = ->
 		
 isTextboxDisabled = (textContent) ->
 	textContent.length < 1 || textContent.length > 189 ||  $( "#comments" ).hasClass( "blockEntries");
-		
+	
+
+addMessageCountForDistractedUser = ->
+	$(window).on("blur focus", (event) -> 
+		prevType = $(this).data("prevType")
+		if prevType != event.type   # reduce double fire issues
+			if event.type is "blur"
+				theNum = document.title.match(/\d+/)
+				if(theNum is null)
+					theNum = "0"
+				else
+					newNumber = +theNum + 1
+				document.title = "Cacofoni " + newNumber.toString()
+			else if event.type is "focus" 
+				document.title = "Cacofoni")
+				
