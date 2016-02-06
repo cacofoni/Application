@@ -1,7 +1,7 @@
 <%= feedback_tab(:position => 'bottom') %>
  <div id = "feed">
 	 <div class = "marquee">
-		<% @feed.entries.each do |feed| %>
+		<% @entries.each do |feed| %>
 			<a href="<%= feed.url %>" target="_blank" class="marquee"> &nbsp; &nbsp; <%= feed.title %> &nbsp; &nbsp;</a> 
 		<% end %>
 	</div>

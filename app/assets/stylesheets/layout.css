@@ -117,6 +117,7 @@ img.emoji {
 	border-bottom-color: black;
 	border-bottom-style: solid;
 	border-bottom-width:1px;
+	display: none; /* on-start we want to hide the display so it can load */
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(right,rgba(180,0,0,1),rgba(255,0,0,1)); /*Safari 5.1-6*/
     background: -o-linear-gradient(left,rgba(180,0,0,1),rgba(255,0,0,1)); /*Opera 11.1-12*/
