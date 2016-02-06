@@ -12,12 +12,10 @@ $(document).ready ->
 showRandomNews = ->
 	setInterval =>
 	    getRandomNews()
-	  , 8000	
+	  , 15000	
 	  
 getRandomNews = ->
 	$('a.marquee').hide()
 	member1 = Math.floor( (Math.random() * $('a.marquee').length) + 1 )
-	member2 = Math.floor( (Math.random() * $('a.marquee').length) + 1 )
 	$('.marquee a').eq(member1).show("slideDown")
-	$('.marquee a').eq(member2).show("slideDown")
 	
