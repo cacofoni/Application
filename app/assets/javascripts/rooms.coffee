@@ -12,7 +12,7 @@ $(document).ready ->
 showRandomNews = ->
 	setInterval =>
 	    getRandomNews()
-	  , 5000	
+	  , 8000	
 	  
 getRandomNews = ->
 	$('a.marquee').hide()
